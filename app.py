@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -56,3 +58,8 @@ def get_start_position():
         "state": turns[0]
     }
     return jsonify(start_position)
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port, debug=True)
