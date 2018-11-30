@@ -31,12 +31,12 @@ turns = [
 ]
 
 
-@app.route("/",  methods=['POST'])
+@app.route("/",  methods=['POST', 'GET'])
 def hello():
     return "Hello World!"
 
 
-@app.route("/get_position",  methods=['POST'])
+@app.route("/get_position",  methods=['POST', 'GET'])
 def get_position():
     global turn_number
     global turns
@@ -50,7 +50,7 @@ def get_position():
     return jsonify(turn)
 
 
-@app.route("/get_start_position",  methods=['POST'])
+@app.route("/get_start_position",  methods=['POST', 'GET'])
 def get_start_position():
     global turn_number
     global turns
