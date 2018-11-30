@@ -1,0 +1,8 @@
+fetch('https://chess-master-tensor.herokuapp.com/get_start_position', {
+  method: 'GET',
+  headers:{
+    'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked'
+  }
+}).then(res => res.json())
+.then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
