@@ -44,7 +44,7 @@ def get_position():
     global turn_number
     global turns
 
-    if turns[turn_number - 1] == len(turns):
+    if turn_number-1 == len(turns):
         turn_number = 0
         print('jopa')
 
