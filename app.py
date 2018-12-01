@@ -44,12 +44,10 @@ def get_position():
     global turn_number
     global turns
 
-    if turn_number-1 == len(turns):
-        turn_number = 0
-        print('jopa')
-
     if len(turns) - 1 > turn_number:
         turn_number += 1
+    else:
+        turn_number = 0
     
     turn = {
         "state": turns[turn_number]
